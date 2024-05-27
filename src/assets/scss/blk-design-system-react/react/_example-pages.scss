@@ -1,0 +1,9 @@
+// style for the landing page
+.index-page .squares{
+  @include linear-gradient($red, $light-red);
+}
+.register-page, .section.section-signup{
+  .squares, .square {
+    background: $red;
+  }
+}

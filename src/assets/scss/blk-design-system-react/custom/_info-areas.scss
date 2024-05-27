@@ -1,0 +1,146 @@
+.info{
+    max-width: 360px;
+    margin: 0 auto 7px;
+    padding: 20px 5px 10px;
+    transition-duration: 0.3s;
+    
+
+    .icon{
+        color: $default;
+
+        > i{
+            font-size: $h1-font-size;
+        }
+    }
+    .info-title{
+        color: $white;
+        margin: 0.875rem * 2 0 0.875rem;
+    }
+    p{
+        color: $opacity-gray-8;
+        line-height: 24px;
+    }
+}
+
+hr {
+  width: 100%;
+  height: 1px;
+  border-radius: 3px;
+  margin-left: 0;
+
+  &.line-primary {
+    background-color: $primary;
+  }
+  &.line-info {
+    background-color: $info;
+  }
+  &.line-success {
+    background-color: $success;
+  }
+  &.line-warning {
+    background-color: $warning;
+  }
+  &.line-danger {
+    box-shadow: 0 0 7px #ff0000;
+    background-color: #ff7692;
+  }
+  &.line-deafult {
+    background-color: $default;
+  }
+  &.line-diensten-1 {
+    background-color: #c2abfb;
+    box-shadow: 0 0 7px #9100ff;
+  }
+  &.line-diensten-2 {
+    background-color: #fda38e;
+    box-shadow: 0 0 7px #ff390a;
+  }
+  &.line-diensten-3 {
+    background-color: #80ffdd;
+    box-shadow: 0 0 7px #00f2c3;
+  }
+  &.line-diensten-4 {
+    background-color: #88edff;
+    box-shadow: 0 0 7px #11cdef;
+  }
+  &.line-diensten-5 {
+    background-color: #f191e2;
+    box-shadow: 0 0 7px #e14eca;
+  }
+}
+
+.info-horizontal{
+    .icon{
+        float: left;
+        margin-top: 24px;
+        margin-right: 10px;
+
+        >i{
+            font-size: $h1-font-size;
+        }
+    }
+    .description{
+        overflow: hidden;
+    }
+
+}
+
+.icon {
+  &.icon-primary {
+    color: $primary;
+    }
+  &.icon-info {
+    color: $info;
+  }
+  &.icon-success {
+    color: $success;
+  }
+  &.icon-warning {
+    color: $warning;
+  }
+  &.icon-danger {
+    color: $danger;
+  }
+  &.icon-diensten-1 {
+    color: $purple;
+  }
+  &.icon-diensten-2 {
+    color: $orange;
+  }
+  &.icon-diensten-3 {
+    color: $cyan;
+  }
+  &.icon-diensten-4 {
+    color: $teal;
+  }
+  &.icon-diensten-5 {
+    color: $primary;
+  }
+
+}
+
+.homepage-info {
+  .info {
+    &:hover {
+      box-shadow: 0 0 3px #535995;
+      padding: 66px 5px 30px;
+      margin: 0 auto;
+    }
+  }
+}
+
+.glitch {
+  animation: skew-y-shake 4s infinite;
+}
+
+@keyframes skew-y-shake {
+  0% {  filter: brightness(1.5); }
+  10% { filter: brightness(1.5); }
+  12% { filter: brightness(0.7); }
+  15% { filter: brightness(1.5); }
+  17% { filter: brightness(0.7); }
+  18% { filter: brightness(1.5); }
+  19% { filter: brightness(0.7); }
+  20% { filter: brightness(1.5); }
+  100% { filter: brightness(1.5); }  
+}
