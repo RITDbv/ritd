@@ -127,14 +127,14 @@ export default function MainNavbar(logo) {
                 <p>OVER ONS</p>
               </NavLink>
             </NavItem>
-            <NavItem>
+            {/* <NavItem>
               <NavLink
                 href="/werken-bij"
 
               >
                 <p>Werken bij</p>
               </NavLink>
-            </NavItem>
+            </NavItem> */}
             {/* <NavItem>
                       <NavLink
                         href="/over-ons"
@@ -177,7 +177,7 @@ export default function MainNavbar(logo) {
                         <p>Werken bij</p>
                       </NavLink>
                     </NavItem> */}
-            {/* <UncontrolledDropdown nav>
+            <UncontrolledDropdown nav>
               <DropdownToggle
                 aria-expanded={false}
                 aria-haspopup={true}
@@ -197,12 +197,12 @@ export default function MainNavbar(logo) {
                   Werken bij
                 </DropdownItem>
                 <DropdownItem
-                  href="/"
+                  href="/vacatures"
                 >
                   Vacatures
                 </DropdownItem>
               </DropdownMenu>
-            </UncontrolledDropdown> */}
+            </UncontrolledDropdown>
             <NavItem>
               <NavLink
                 href="/contact"

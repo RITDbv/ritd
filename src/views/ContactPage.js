@@ -17,8 +17,7 @@
 */
 import React, { useRef } from "react";
 // javascript plugin used to create scrollbars on windows
-import PerfectScrollbar from "perfect-scrollbar";
-import emailjs from '@emailjs/browser';
+
 // reactstrap components
 import {
   Button,
@@ -38,6 +37,7 @@ import {
 import MainHeader from "components/PageHeader/MainHeader";
 import Footer from "components/Footer/Footer.js";
 import MainNavbar from "components/Navbars/MainNavbar";
+import ContactForm from "components/Forms/ContactForm";
 
 export default function ContactPage() {
   React.useEffect(() => {
@@ -50,59 +50,6 @@ export default function ContactPage() {
     };
   }, []);
 
-  const form = useRef();
-
-  // const [formData, setFormData] = useState({
-  //   name: "",
-  //   email: "",
-  //   phone: "",
-  //   company: "",
-  //   message: "",
-  // });
-
-  // const handleChange = (e) => {
-  //   const { name, value } = e.target;
-  //   setFormData({
-  //     ...formData,
-  //     [name]: value,
-  //   });
-  // };
-
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
-
-  //   // emailjs.send(
-  //   //   'service_0t3cwrn', // Replace with your EmailJS service ID
-  //   //   'template_95076h7', // Replace with your EmailJS template ID
-  //   //   formData,
-  //   //   'your_user_id' // Replace with your EmailJS user ID
-  //   // ).then((response) => {
-  //   //   console.log('SUCCESS!', response.status, response.text);
-  //   //   alert('Message sent successfully!');
-  //   // }, (err) => {
-  //   //   console.log('FAILED...', err);
-  //   //   alert('Failed to send message. Please try again.');
-  //   // });
-
-
-  const sendEmail = (e) => {
-    e.preventDefault();
-
-    emailjs
-      .sendForm('service_0t3cwrn', 'template_95076h7', form.current, {
-        publicKey: 'MbG2TAgPekgQL02Du',
-      })
-      .then(
-        () => {
-          console.log('SUCCESS!');
-          alert('Message sent successfully!');
-        },
-        (error) => {
-          console.log('FAILED...', error.text);
-          alert('Failed to send message. Please try again.');
-        }
-      );
-  };
   return (
     <>
       <MainNavbar />
@@ -132,82 +79,7 @@ export default function ContactPage() {
                   <CardHeader>
                     <h5 className="text-on-back">RITD</h5>
                   </CardHeader>
-                  <CardBody>
-                    <form ref={form} onSubmit={sendEmail}>
-                      <Row>
-                        <Col md="6">
-                          <FormGroup>
-                            <label>NAAM</label>
-                            <Input
-                              type="text"
-                              name="name"
-                              required
-                            />
-                          </FormGroup>
-                        </Col>
-                        <Col md="6">
-                          <FormGroup>
-                            <label>EMAIL ADRES</label>
-                            <Input
-                              type="email"
-                              name="email"
-                              required
-                            />
-                          </FormGroup>
-                        </Col>
-                      </Row>
-                      <Row>
-                        <Col md="6">
-                          <FormGroup>
-                            <label>TELEFOONNUMMER</label>
-                            <Input
-                              type="phone"
-                              name="phone"
-                              required
-                            />
-                          </FormGroup>
-                        </Col>
-                        <Col md="6">
-                          <FormGroup>
-                            <label>BEDRIJF</label>
-                            <Input
-                              type="text"
-                              name="company"
-                              required
-                            />
-                          </FormGroup>
-                        </Col>
-                      </Row>
-                      <Row>
-                        <Col md="12">
-                          <FormGroup>
-                            <label>BERICHT</label>
-                            <textarea
-                              className="form-control"
-                              name="message"
-                              required
-                            />
-                          </FormGroup>
-                        </Col>
-                      </Row>
-                      {/* <input
-                        type="submit"
-                        value="VERZENEDEN"
-                        className="btn-round float-right"
-                        color="danger"
-                      /> */}
-                                            <Button
-                        className="btn-round float-right"
-                        color="danger"
-                        data-placement="right"
-                        id="tooltip341148792"
-                        type="submit"
-                        // onClick={handleSubmit}
-                      >
-                        VERZENDEN
-                      </Button>
-                    </form>
-                  </CardBody>
+                    <ContactForm />
                 </Card>
               </Col>
               <Col className="ml-auto" md="4">

@@ -40,6 +40,10 @@ import ContactPage from "views/ContactPage";
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fas } from '@fortawesome/free-solid-svg-icons'
 import KPNPage from "views/KPNPage";
+import VacaturesPage from "views/VacaturesPage";
+import FullStackEngineer from "views/vacatures/FullStackEngineer";
+import DataEngineer from "views/vacatures/DataEngineer";
+import ITEngineer from "views/vacatures/ITEngineer";
 
 library.add(fas)
 
@@ -59,6 +63,10 @@ root.render(
       <Route path="/kpn" element={<KPNPage />} />
       <Route path="/over-ons" element={<OverOnsPage />} />
       <Route path="/werken-bij" element={<WerkenBijPage />} />
+      <Route path="/vacatures" element={<VacaturesPage />} />
+      <Route path="/fullstackengineer" element={<FullStackEngineer />} />
+      <Route path="/dataengineer" element={<DataEngineer />} />
+      <Route path="/itengineer" element={<ITEngineer />} />
       <Route path="/contact" element={<ContactPage />} />
       <Route path="/landing-page" element={<LandingPage />} />
       <Route path="/register-page" element={<RegisterPage />} />
