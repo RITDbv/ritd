@@ -280,7 +280,7 @@
             max-width: 880px;
     
             &.brand {
-              width: 47%;
+              width: 100%;
             }
     
         }
@@ -367,7 +367,7 @@
         max-width: 880px;
 
         &.brand {
-          width: 47%;
+          width: 100%;
         }
 
     }
@@ -1142,3 +1142,110 @@
 // @import 'sections/_contactus';
 //
 // @import 'sections/_social-subscribe-lines';
+
+
+.light-blue-background {
+    padding: 20px;
+    background-color: #2b309140;
+    border-radius: 4px;
+}
+
+
+@media (min-width: 768px) {
+    .info:first-of-type {
+        z-index: 2;
+    }
+}
+
+.features-2 .info {
+    padding: 30px 10px;
+    margin: 30px auto 0;
+    opacity: .9;
+}
+
+.info {
+    max-width: 360px;
+    margin: 0 auto;
+    padding: 70px 10px 30px;
+    text-align: center;
+    border-radius: 3px;
+}
+
+.bg-info {
+    background-color: #1d8cf8 !important;
+}
+
+.features-2 .info.info-raised {
+    margin-top: -5px;
+}
+
+.bg-default {
+    background-color: #344675 !important;
+}
+
+.icon.icon-white {
+    color: #fff;
+}
+
+.title {
+    margin-top: 30px;
+    margin-bottom: 25px;
+    font-weight: 600;
+    color: hsla(0, 0%, 100%, .8);
+}
+
+.card-description, .card .footer .stats, .description {
+    color: #9a9a9a;
+    font-weight: 300;
+}
+
+.info-horizontal {
+    max-width: 500px !important;
+    text-align: left !important;
+}
+
+.info-horizontal .description {
+    overflow: hidden;
+    text-align: justify;
+}
+
+.info-horizontal .icon {
+    width: 40px;
+    height: 40px;
+    float: left;
+    margin: 30px 0 0 15px;
+}
+
+@media (min-width: 768px) {
+    .info-horizontal:first-of-type {
+        padding-top: 0;
+    }
+}
+
+.info.info-primary:hover {
+    background-color: #e14eca;
+    box-shadow: 13px 13px 50px -24px #e14eca;
+}
+
+.features-4 .info:hover {
+    transition: all .3s ease 0s;
+}
+
+@media (min-width: 768px) {
+   .features-4 .info:first-of-type {
+        padding: 10px;
+    }
+}
+
+.features-6 .info {
+    max-width: 360px;
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+    border-radius: 3px;
+}
+
+.img-width {
+    width: 520px;
+    padding-left: 50px;
+}
